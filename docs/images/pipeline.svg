@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">CompanyIntel Processing Pipeline</title>
+  <desc id="desc">Search, collect, summarize, generate hypothesis letter, and export.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0d1118"/>
+      <stop offset="100%" stop-color="#1b1231"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 30px 'Segoe UI', sans-serif; fill: #f8e6b0; }
+      .step-title { font: 700 18px 'Segoe UI', sans-serif; fill: #fff4d6; }
+      .step-text { font: 500 14px 'Segoe UI', sans-serif; fill: #e7dcc0; }
+      .cap { font: 600 15px 'Segoe UI', sans-serif; fill: #d9c98d; }
+      .note { font: 500 14px 'Segoe UI', sans-serif; fill: #ffdd9a; }
+      .s1 { fill: #2a1f12; stroke: #f4c958; stroke-width: 2; rx: 16; }
+      .s2 { fill: #1a2330; stroke: #8db8ff; stroke-width: 2; rx: 16; }
+      .s3 { fill: #16282a; stroke: #79d5c8; stroke-width: 2; rx: 16; }
+      .s4 { fill: #2a1a33; stroke: #d39cff; stroke-width: 2; rx: 16; }
+      .s5 { fill: #273016; stroke: #b8e37e; stroke-width: 2; rx: 16; }
+      .s6 { fill: #2f1e14; stroke: #ffbb7f; stroke-width: 2; rx: 16; }
+      .arrow { stroke: #f4c958; stroke-width: 2.4; marker-end: url(#ah); fill: none; }
+      .arrow2 { stroke: #8db8ff; stroke-width: 2.4; marker-end: url(#ah2); fill: none; }
+    </style>
+    <marker id="ah" orient="auto" markerWidth="8" markerHeight="8" refX="7" refY="4">
+      <path d="M0,0 L8,4 L0,8 z" fill="#f4c958"/>
+    </marker>
+    <marker id="ah2" orient="auto" markerWidth="8" markerHeight="8" refX="7" refY="4">
+      <path d="M0,0 L8,4 L0,8 z" fill="#8db8ff"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="720" fill="url(#bg2)"/>
+
+  <text x="56" y="58" class="title">Processing Pipeline (Per Job)</text>
+
+  <rect class="s1" x="60" y="130" width="200" height="180"/>
+  <text x="78" y="170" class="step-title">1. Search Input</text>
+  <text x="78" y="198" class="step-text">queries, locale, limit</text>
+  <text x="78" y="225" class="step-text">manual companies</text>
+  <text x="78" y="252" class="step-text">cost/quota estimate</text>
+
+  <rect class="s2" x="290" y="130" width="210" height="180"/>
+  <text x="308" y="170" class="step-title">2. Candidate Build</text>
+  <text x="308" y="198" class="step-text">Google CSE API</text>
+  <text x="308" y="225" class="step-text">official URL dedupe</text>
+  <text x="308" y="252" class="step-text">manual merge</text>
+
+  <rect class="s3" x="530" y="130" width="220" height="180"/>
+  <text x="548" y="170" class="step-title">3. Crawl & Extract</text>
+  <text x="548" y="198" class="step-text">robots.txt check</text>
+  <text x="548" y="225" class="step-text">rate limit / timeout</text>
+  <text x="548" y="252" class="step-text">IR PDF text extract</text>
+
+  <rect class="s4" x="780" y="130" width="240" height="180"/>
+  <text x="798" y="170" class="step-title">4. LLM Summarize</text>
+  <text x="798" y="198" class="step-text">business / ir / other</text>
+  <text x="798" y="225" class="step-text">hypothesis (non-assertive)</text>
+  <text x="798" y="252" class="step-text">letter draft + sources</text>
+
+  <rect class="s5" x="1050" y="130" width="200" height="180"/>
+  <text x="1068" y="170" class="step-title">5. Persist</text>
+  <text x="1068" y="198" class="step-text">record status</text>
+  <text x="1068" y="225" class="step-text">checkpoint update</text>
+  <text x="1068" y="252" class="step-text">resume support</text>
+
+  <rect class="s6" x="490" y="400" width="420" height="190"/>
+  <text x="520" y="444" class="step-title">6. Export</text>
+  <text x="520" y="473" class="step-text">Preferred: Google Sheets + Docs URL</text>
+  <text x="520" y="500" class="step-text">Fallback: CSV output</text>
+  <text x="520" y="527" class="step-text">No auto-send. Draft only.</text>
+
+  <path class="arrow" d="M260 220 L290 220"/>
+  <path class="arrow2" d="M500 220 L530 220"/>
+  <path class="arrow" d="M750 220 L780 220"/>
+  <path class="arrow2" d="M1020 220 L1050 220"/>
+  <path class="arrow" d="M1150 310 L1150 365 L910 365 L910 400"/>
+
+  <rect x="60" y="400" width="370" height="190" rx="16" fill="#16161d" stroke="#ffd78a" stroke-width="2"/>
+  <text x="84" y="440" class="cap">Failure Tolerance</text>
+  <text x="84" y="469" class="step-text">- Retry with exponential backoff</text>
+  <text x="84" y="496" class="step-text">- Per-company error logging</text>
+  <text x="84" y="523" class="step-text">- Rerun failed-only from UI/API</text>
+
+  <rect x="960" y="400" width="300" height="190" rx="16" fill="#171a13" stroke="#b9e681" stroke-width="2"/>
+  <text x="984" y="440" class="cap">Compliance Guard</text>
+  <text x="984" y="469" class="step-text">- robots / ToS-aware design</text>
+  <text x="984" y="496" class="step-text">- explicit User-Agent</text>
+  <text x="984" y="523" class="step-text">- hypothesis wording only</text>
+
+  <text x="56" y="668" class="note">Legend: All generated letters are draft hypotheses and require human review before use.</text>
+</svg>

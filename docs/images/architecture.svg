@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">CompanyIntel Letter Builder Architecture</title>
+  <desc id="desc">Frontend, backend services, database, and external APIs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#121218"/>
+      <stop offset="100%" stop-color="#1f1630"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 30px 'Segoe UI', sans-serif; fill: #f8e6b0; }
+      .subtitle { font: 500 18px 'Segoe UI', sans-serif; fill: #d9c68b; }
+      .label { font: 600 17px 'Segoe UI', sans-serif; fill: #f3f0e6; }
+      .small { font: 500 14px 'Segoe UI', sans-serif; fill: #e5dcc1; }
+      .box { fill: #21192f; stroke: #f4c958; stroke-width: 2; rx: 14; }
+      .box-soft { fill: #172226; stroke: #77d2c8; stroke-width: 2; rx: 14; }
+      .box-db { fill: #202638; stroke: #8eb2ff; stroke-width: 2; rx: 14; }
+      .box-io { fill: #2b2315; stroke: #ffcf66; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #f4c958; stroke-width: 2.2; marker-end: url(#arrowHead); fill: none; }
+      .arrow2 { stroke: #89d8cf; stroke-width: 2.2; marker-end: url(#arrowHead2); fill: none; }
+      .arrow3 { stroke: #9ab8ff; stroke-width: 2.2; marker-end: url(#arrowHead3); fill: none; }
+    </style>
+    <marker id="arrowHead" orient="auto" markerWidth="8" markerHeight="8" refX="7" refY="4">
+      <path d="M0,0 L8,4 L0,8 z" fill="#f4c958"/>
+    </marker>
+    <marker id="arrowHead2" orient="auto" markerWidth="8" markerHeight="8" refX="7" refY="4">
+      <path d="M0,0 L8,4 L0,8 z" fill="#89d8cf"/>
+    </marker>
+    <marker id="arrowHead3" orient="auto" markerWidth="8" markerHeight="8" refX="7" refY="4">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9ab8ff"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="860" fill="url(#bg)"/>
+
+  <text x="56" y="54" class="title">CompanyIntel Letter Builder</text>
+  <text x="56" y="84" class="subtitle">FastAPI + PostgreSQL + Next.js (Local Runtime)</text>
+
+  <rect class="box" x="70" y="150" width="270" height="120"/>
+  <text x="98" y="197" class="label">Operator</text>
+  <text x="98" y="226" class="small">Browser User</text>
+
+  <rect class="box" x="420" y="130" width="360" height="160"/>
+  <text x="448" y="177" class="label">Frontend (Next.js)</text>
+  <text x="448" y="206" class="small">Input, Progress, Edit, Export Trigger</text>
+  <text x="448" y="235" class="small">Cost Guard / Confirmation UI</text>
+
+  <rect class="box-soft" x="400" y="350" width="780" height="390"/>
+  <text x="430" y="392" class="label">Backend (FastAPI)</text>
+
+  <rect class="box" x="430" y="420" width="330" height="120"/>
+  <text x="452" y="462" class="label">API Layer</text>
+  <text x="452" y="490" class="small">/api/companyintel-letter-builder</text>
+
+  <rect class="box" x="430" y="570" width="330" height="140"/>
+  <text x="452" y="612" class="label">Task Runner</text>
+  <text x="452" y="640" class="small">Checkpoint / Retry / Resume</text>
+  <text x="452" y="668" class="small">Per-company Status Update</text>
+
+  <rect class="box" x="800" y="420" width="350" height="290"/>
+  <text x="824" y="462" class="label">Service Modules</text>
+  <text x="824" y="493" class="small">Search Service (Google CSE API)</text>
+  <text x="824" y="522" class="small">Crawler Service (robots, rate-limit)</text>
+  <text x="824" y="551" class="small">PDF Service (IR extraction)</text>
+  <text x="824" y="580" class="small">LLM Service (OpenAI / Anthropic)</text>
+  <text x="824" y="609" class="small">Output Service (Sheets / Docs / CSV)</text>
+
+  <rect class="box-db" x="1210" y="430" width="150" height="130"/>
+  <text x="1231" y="476" class="label">PostgreSQL</text>
+  <text x="1230" y="505" class="small">Jobs / Records</text>
+
+  <rect class="box-db" x="1210" y="590" width="150" height="120"/>
+  <text x="1241" y="634" class="label">File Cache</text>
+  <text x="1233" y="662" class="small">HTML / PDF / LLM</text>
+
+  <rect class="box-io" x="70" y="430" width="270" height="130"/>
+  <text x="94" y="475" class="label">External APIs</text>
+  <text x="94" y="504" class="small">Google CSE, OpenAI, Claude</text>
+  <text x="94" y="532" class="small">Google Sheets / Docs API</text>
+
+  <rect class="box-io" x="70" y="590" width="270" height="120"/>
+  <text x="94" y="635" class="label">Outputs</text>
+  <text x="94" y="664" class="small">Sheets + Docs URL / CSV</text>
+
+  <path class="arrow" d="M340 210 L420 210"/>
+  <path class="arrow" d="M600 290 L600 350"/>
+  <path class="arrow" d="M600 540 L600 570"/>
+  <path class="arrow2" d="M760 490 L800 490"/>
+  <path class="arrow3" d="M1150 495 L1210 495"/>
+  <path class="arrow3" d="M1150 650 L1210 650"/>
+  <path class="arrow2" d="M400 485 L340 485"/>
+  <path class="arrow2" d="M400 650 L340 650"/>
+
+  <text x="64" y="810" class="small">Note: Letter text is hypothesis-only draft. No automatic send.</text>
+</svg>
