@@ -46,7 +46,7 @@
   <text x="308" y="252" class="step-text">manual merge</text>
 
   <rect class="s3" x="530" y="130" width="220" height="180"/>
-  <text x="548" y="170" class="step-title">3. Crawl & Extract</text>
+  <text x="548" y="170" class="step-title">3. Crawl &amp; Extract</text>
   <text x="548" y="198" class="step-text">robots.txt check</text>
   <text x="548" y="225" class="step-text">rate limit / timeout</text>
   <text x="548" y="252" class="step-text">IR PDF text extract</text>
