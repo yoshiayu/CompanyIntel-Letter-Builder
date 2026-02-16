@@ -12,11 +12,11 @@ FastAPI + PostgreSQL + Next.js で構成した、企業調査と提案文下書�
 
 ## アーキテクチャ図
 
-![Architecture](docs/images/architecture.png)
+<img src="docs/images/architecture.png" alt="Architecture" width="100%" />
 
 ## 処理フロー図
 
-![Pipeline](docs/images/pipeline.png)
+<img src="docs/images/pipeline.png" alt="Pipeline" width="100%" />
 
 ## ディレクトリ構成
 
